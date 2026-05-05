@@ -1,2 +1,4 @@
 # Calculator
 This is a regular 4-function calculator made using WinUI3
+Run this app through Visual Studio after downloading the WinUI 3 packages:
+https://learn.microsoft.com/en-us/windows/apps/get-started/start-here?tabs=wingetconfig
