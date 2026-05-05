@@ -167,8 +167,9 @@ namespace Calculator
 
         private void plusMinus()
         {
+            float value;
             float temp = 0;
-            if(num != 2)
+            if(num != 2 && float.TryParse(input1, out value))
             {
                 temp = float.Parse(input1);
                 temp *= -1;
@@ -177,10 +178,14 @@ namespace Calculator
             }
             else
             {
-                temp = float.Parse(input2);
-                temp *= -1;
-                input2 = temp.ToString();
-                input2text.Text = input2;
+                if(float.TryParse(input2, out value))
+                {
+                    temp = float.Parse(input2);
+                    temp *= -1;
+                    input2 = temp.ToString();
+                    input2text.Text = input2;
+                }
+                
             }
         }
 
